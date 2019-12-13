@@ -1,0 +1,17 @@
+<div style="text-align:center">
+  <h1>
+    Restaurants
+  </h1>
+
+  <span *ngFor="let name of Restaurants">
+    {{restaurant.name}} - {{record.rating}}
+    <star-rating [starType]="'svg'" [rating]="2.63"></star-rating>
+    <br />
+  </span>
+  <br>
+  <a *ngFor="let item of starList; let i=index " (click)="setStar(i)">
+    <i class="fa" [ngClass]="{'fa-star-o':item,'fa-star':!item}"></i>
+  </a>
+  <br>
+  Rating :- {{rating}} stars
+</div>
